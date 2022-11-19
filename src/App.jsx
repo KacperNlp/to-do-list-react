@@ -45,6 +45,10 @@ const App = () => {
     setToDoList(toDoListAfterRemovDoneTask);
   };
 
+  const removeTaskFromToDoList = (updatedArrayWithToDoTasks) => {
+    setToDoList(updatedArrayWithToDoTasks);
+  };
+
   const removeTaskFromDoneTasksList = (updatedArrayWithDoneTasks) => {
     setDoneTasks(updatedArrayWithDoneTasks);
   };
@@ -76,7 +80,11 @@ const App = () => {
           <Route
             path="/to-do"
             element={
-              <ToDoList toDoList={toDoList} addTaskToDone={addTaskToDone} />
+              <ToDoList
+                toDoList={toDoList}
+                addTaskToDone={addTaskToDone}
+                removeTaskFromToDoList={removeTaskFromToDoList}
+              />
             }
           />
           <Route path="/" element={<FormToAddTask addNewTask={addNewTask} />} />

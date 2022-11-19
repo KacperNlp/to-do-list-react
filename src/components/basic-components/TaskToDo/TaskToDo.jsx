@@ -2,7 +2,14 @@ import Button from "../Button/Button";
 
 import "./TaskToDo.scss";
 
-const TaskToDo = ({ id, task, date, isImportant, addTaskToDone }) => {
+const TaskToDo = ({
+  id,
+  task,
+  date,
+  isImportant,
+  addTaskToDone,
+  removeTask,
+}) => {
   const dateHtml = !!date.length ? date : "not set";
   const taskClasses = isImportant
     ? "task-to-do task-to-do--important"
@@ -16,7 +23,10 @@ const TaskToDo = ({ id, task, date, isImportant, addTaskToDone }) => {
           <strong>date:</strong> {dateHtml}
         </p>
       </div>
-      <Button text="Set as done" onClick={() => addTaskToDone(id)} />
+      <div className="task-to-do__buttons">
+        <Button text="Set as done" onClick={addTaskToDone} />
+        <Button text="Remove task" onClick={removeTask} />
+      </div>
     </li>
   );
 };

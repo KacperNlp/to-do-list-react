@@ -14,4 +14,11 @@
         line-height: 150%;
         font-style: italic;
     }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: 10px;
+    }
 }
