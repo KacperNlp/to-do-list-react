@@ -1,0 +1,17 @@
+.task-to-do {
+    padding: 20px 10px;
+
+    &--important {
+        border-top: 2px solid rgb(207, 21, 21);
+        border-bottom: 2px solid rgb(207, 21, 21);
+    }
+
+    &__content {
+        margin-bottom: 20px;
+    }
+
+    &__task {
+        line-height: 150%;
+        font-style: italic;
+    }
+}
